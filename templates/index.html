@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monknet AI Control Center</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <main class="dashboard">
+        <section class="header">
+            <div class="header-topline">
+                <p class="eyebrow">Live Security Telemetry</p>
+                <span class="version-badge">Monknet v1.0</span>
+            </div>
+            <h1>Monknet AI Control Center</h1>
+            <p class="subtitle">Core resources, local time, and operating status at a glance.</p>
+        </section>
+
+        <section class="stats-grid" aria-label="System stats">
+            <article class="stat-card">
+                <div class="stat-topline">
+                    <span class="stat-label">CPU</span>
+                    <span class="stat-status" id="cpu-status">Scanning</span>
+                </div>
+                <strong id="cpu-value">--%</strong>
+                <div class="meter" aria-hidden="true">
+                    <span id="cpu-bar"></span>
+                </div>
+                <p class="metric-note">Processor load</p>
+            </article>
+
+            <article class="stat-card">
+                <div class="stat-topline">
+                    <span class="stat-label">RAM</span>
+                    <span class="stat-status" id="ram-status">Scanning</span>
+                </div>
+                <strong id="ram-value">--%</strong>
+                <div class="meter" aria-hidden="true">
+                    <span id="ram-bar"></span>
+                </div>
+                <p class="metric-note">Memory allocation</p>
+            </article>
+
+            <article class="stat-card">
+                <div class="stat-topline">
+                    <span class="stat-label">Time</span>
+                    <span class="stat-status online">Online</span>
+                </div>
+                <strong id="time-value">--:--:--</strong>
+                <div class="time-pulse">
+                    <span></span>
+                    <span>Sync interval 2s</span>
+                </div>
+            </article>
+
+            <article class="stat-card security-card">
+                <div class="stat-topline">
+                    <span class="stat-label">Security Events</span>
+                    <span class="stat-status" id="threat-level">Scanning</span>
+                </div>
+                <div class="security-summary">
+                    <strong id="attempt-count">--</strong>
+                    <span>total failed attempts</span>
+                </div>
+                <p class="security-insight" id="security-insight">Awaiting event analysis.</p>
+                <div class="event-list" id="security-events" aria-live="polite">
+                    <p class="empty-events">Loading security events...</p>
+                </div>
+                <p class="metric-note" id="security-source">Source: scanning</p>
+            </article>
+        </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
