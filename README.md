@@ -37,7 +37,12 @@ The system currently uses simulated events to validate detection logic and UI be
 - Network scanning integration (e.g., Nmap)
 
 ## 📸 Preview
-(Add your screenshots here after upload)
+
+### System Dashboard
+![Dashboard](dashboard.png)
+
+### Security Events Detection
+![Security Events](security-events.png)
 
 ## 🛠️ How to Run
 ```bash
