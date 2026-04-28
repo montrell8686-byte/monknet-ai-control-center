@@ -39,10 +39,10 @@ The system currently uses simulated events to validate detection logic and UI be
 ## 📸 Preview
 
 ### System Dashboard
-![Dashboard](dashboard.png)
+![Dashboard](monknet_dashboard.png)
 
 ### Security Events Detection
-![Security Events](security-events.png)
+![Security Events](monknet_security_events.png)
 
 ## 🛠️ How to Run
 ```bash
